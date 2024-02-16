@@ -1,7 +1,7 @@
-const fs = require('fs');
+const fs = require('fs');  // Importation du module fs (file system) de Node.js
 
 module.exports = {
-    createDirectory: (name)=>{
+    createDirectory: (name)=>{  // Créer un dossier avec la méthode: mkdirSync
         try {
             
             fs.mkdirSync(name)
@@ -13,7 +13,7 @@ module.exports = {
         }
     
     },
-    createFile: (filePath, content)=>{
+    createFile: (filePath, content)=>{  // Créer un fichier avec la méthode: appendFileSync
         try {
             
             fs.appendFileSync(filePath, content)
@@ -25,7 +25,7 @@ module.exports = {
         }
     
     },
-    removeFile: (filePath)=>{
+    removeFile: (filePath)=>{   // Supprimer un fichier avec la méthode: unlinkSync
         try {
 
             fs.unlinkSync(filePath)
@@ -36,7 +36,7 @@ module.exports = {
             
         }
     },
-    removeDirectory: (name)=>{
+    removeDirectory: (name)=>{  // Supprimer un dossier
         try {
             
             fs.rmdirSync(name)
@@ -49,3 +49,5 @@ module.exports = {
     
     }
 }
+
+//Pour lancer exécuter le code: node npm_du_fichier.js
