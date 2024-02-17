@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+
+  <ul class="list-group">
+    {% for user in users %}
+      <li class="list-group-item"> 
+        {{ user.civility }}
+        {{ user.firstname }}
+        {{ user.lastname }}
+      </li>
+    {% endfor %}
+
+  </ul>
+  
+{% endblock %}
